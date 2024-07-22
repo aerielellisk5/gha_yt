@@ -1,0 +1,32 @@
+name: Working Dirs & Shells
+on: [push]
+
+jobs:
+  Display-wd-info:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Display Working Directory and List Files
+        run: |
+          pwd
+          ls -a 
+          echo $GITHUB_SHA
+          # the shaw of the commit for this run
+          echo $GITHUB_REPOSITORY
+          # the repo that this is running in
+          echo $GITHUB_WORKSPACE
+          # contains the default workspace/directory for the machine'
+  Display-wd-info-windows:
+    runs-on: wndows-latest
+    steps:
+      - name: Display Working Directory and List Files
+        run: |
+          pwd
+          ls -a 
+          echo $GITHUB_SHA
+          # the shaw of the commit for this run
+          echo $GITHUB_REPOSITORY
+          # the repo that this is running in
+          echo $GITHUB_WORKSPACE
+          # contains the default workspace/directory for the machine
+
+       
