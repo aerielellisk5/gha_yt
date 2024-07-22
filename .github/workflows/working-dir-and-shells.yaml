@@ -3,7 +3,7 @@ on: [push]
 defaults:
   run:
     shell: bash
-    # working-directory: /de/ed
+    # to change the working directory: working-directory: /de/ed
 
 jobs:
   Display-wd-info:
@@ -19,6 +19,9 @@ jobs:
           # the repo that this is running in
           echo $GITHUB_WORKSPACE
           # contains the default workspace/directory for the machine'
+      - name: Change working directory
+        working-directory: /home/runner
+        run: pwd
   Display-wd-info-windows:
     defaults:
       run:
